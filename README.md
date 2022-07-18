@@ -11,11 +11,13 @@ The algorithm is a machine learning algorithm. The specific one used in this pro
 1. Add steps for running this project.
 2. Make sure to include any required libraries that need to be installed for your project to run.
 
-1. Download the directory from Github.
+1. Download the "human-detection" directory from Github.
 2. Download any libraries needed depending on the input source. If the input is a photo or video, download PyTorch to access the python file imagenet.py. If the input is a camera, depending on the connection type (CSI, USB, etc.), you may have to download additional libraries.
 3. Open your computer's console.
 4. If not previously completed, change directories to human-detection.
-5. For an image or video file, type "imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/human-detection/image.jpg image_name.jpg where "image.jpg" is the input file and "image_name.jpg" is what you would like to call the new file. The new file will have a label over it that identifies the image as either "human detected" or "no human detected".
-6. For a camera, type "imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt path/to/camera" where path/to/camera is the directory housing the camera module. This depends on the type of connection between the computer and the camera. After a script runs for about 45 seconds, the console will continuously output lines with computer statistics starting with "[TRT]", as well as two lines starting with "class 0000" and "class 0001". The former represents when no human is detected, and the latter represents when humans are detected. A numerical value is assigned to each, and 0 represents 0% confidence while 1 represents 100% confidence. If the 2nd line is close to 1, that means the model has detected a human in the camera's field of view.
+5. In the console, type "NET=models/human-detection" and run.
+6. After that, type "DATASET=data/human-detection" and run.
+7. For an image or video file, type "imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/human-detection/image.jpg image_name.jpg where "image.jpg" is the input file and "image_name.jpg" is what you would like to call the new file. The new file will have a label over it that identifies the image as either "human detected" or "no human detected".
+8. For a camera, type "imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt path/to/camera" where path/to/camera is the directory housing the camera module. This depends on the type of connection between the computer and the camera. After a script runs for about 45 seconds, the console will continuously output lines with computer statistics starting with "[TRT]", as well as two lines starting with "class 0000" and "class 0001". The former represents when no human is detected, and the latter represents when humans are detected. A numerical value is assigned to each, and 0 represents 0% confidence while 1 represents 100% confidence. If the 2nd line is close to 1, that means the model has detected a human in the camera's field of view.
 
 View a video explanation here: 
