@@ -11,7 +11,7 @@ The algorithm is a machine learning algorithm. The specific one used in this pro
 1. Make sure to include any required libraries that need to be installed for your project to run.
 
 2. Download the "human-detection" directory from Github.
-3. Download any libraries needed depending on the input source. If the input is a photo or video, download PyTorch to access the python file imagenet.py. If the input is a camera, depending on the connection type (CSI, USB, etc.), you may have to download additional libraries.
+3. Download the required libraries corresponding with the desired input source. Hint: if the input is a photo or video, download PyTorch to access the python file imagenet.py. If the input is a camera, depending on the connection type (CSI, USB, etc.), you may have to download additional libraries.
 4. Open your computer's console.
 5. If not previously completed, change directories to human-detection.
 6. In the console, type "NET=models/human-detection" and run.
